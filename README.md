@@ -43,7 +43,39 @@ O cliente possui tratamento de erros para alguns casos:
 - Caso o servidor não esteja rodando, o cliente mostra uma mensagem informando que não foi possível conectar.
 - Caso a conexão com o servidor seja perdida durante a execução, o cliente informa que houve falha na rede.
 
-### Como Executar o Projeto
+## Experimentos
+
+### Experimento 1 – Chamada remota básica
+Ao utilizar a opção de somar números no cliente, a chamada parece uma função normal em Python.  
+Porém, na verdade a execução ocorre no servidor. O cliente apenas envia os dados pela rede e recebe o resultado.
+
+**Resposta:**  
+A operação foi executada no servidor, não no cliente.
+
+---
+
+### Experimento 2 – Estado remoto
+Ao adicionar itens na lista utilizando as opções do cliente, é possível observar que a lista continua armazenando os dados mesmo após várias chamadas.
+
+**Resposta:**  
+A lista está armazenada no servidor, pois o estado da aplicação fica no lado remoto e não na memória do cliente.
+
+---
+
+### Experimento 3 – RPC síncrono
+Ao executar a chamada demorada (por exemplo 5 segundos), o cliente fica aguardando até o servidor terminar a execução.
+
+**Resposta:**  
+O cliente não continua trabalhando enquanto espera. Ele fica bloqueado até receber a resposta do servidor.
+
+---
+
+### Experimento 4 – Falha do servidor
+Quando o servidor é interrompido (Ctrl + C) e o cliente tenta executar uma nova operação, ocorre um erro de conexão.
+
+**Resposta:**  
+Uma chamada remota pode falhar porque a comunicação depende da rede e do servidor estar ativo.  
+Se o servidor estiver desligado ou a conexão for perdida, o cliente não consegue executar o método remoto e ocorre um erro.
 
 ### Passos para Execução
 
