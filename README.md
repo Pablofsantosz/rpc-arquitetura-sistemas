@@ -43,9 +43,21 @@ O cliente possui tratamento de erros para alguns casos:
 - Caso o servidor não esteja rodando, o cliente mostra uma mensagem informando que não foi possível conectar.
 - Caso a conexão com o servidor seja perdida durante a execução, o cliente informa que houve falha na rede.
 
-## Como Executar o Projeto
+### Como Executar o Projeto
 
-1. Instalar a biblioteca necessária:
+### Passos para Execução
 
-```bash
-pip install rpyc
+1. **Instalar a biblioteca necessária**
+    ```bash
+    pip install rpyc
+    ```
+
+2.  **Executar o servidor**
+    ```bash
+    python servidor.py
+    ```
+
+3.  **Executar o cliente**
+    ```bash
+    python cliente.py
+    ```
