@@ -14,9 +14,9 @@ def main():
         print("1. Somar dois números")
         print("2. Adicionar item à lista remota")
         print("3. Chamada demorada  (5 segundos)")
-        print("4. Multiplicar dois números (Novo)")
-        print("5. Contar caracteres (Novo)")
-        print("6. Remover item da lista (Novo)")
+        print("4. Multiplicar dois números ")
+        print("5. Contar caracteres ")
+        print("6. Remover item da lista ")
         print("0. Sair")
         
         opcao = input("Escolha uma opção: ")
